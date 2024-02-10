@@ -1,8 +1,9 @@
 site_name: Debrid Wiki
 site_url: https://debrid.wiki/
 site_description: All about debrid services and related in one place
-repo_name: ayushsehrawat/debrid-wiki
-repo_url: https://github.com/ayushsehrawat/debrid-wiki
+repo_name: debrid/debrid-wiki
+repo_url: https://github.com/debrid/debrid-wiki
+edit_uri: edit/main/docs/
 theme:
   name: material
   features:
@@ -12,47 +13,56 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.tooltips
-    - navigation.footer
-    - navigation.indexes
-    - navigation.sections
-    - navigation.tabs
-    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
     - search.highlight
-    - search.share
     - search.suggest
+    - search.share
     - toc.follow
   language: en
   palette:
+    # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/link
+        icon: material/brightness-auto
         name: Switch to light mode
+    # Palette for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-7
         name: Switch to dark mode
+    # Palette for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: indigo
       toggle:
-        icon: material/toggle-switch-off
+        icon: material/brightness-4
         name: Switch to system preference
   font:
-    text: Roboto
-    code: Roboto Mono
-  logo:  assets/logo.png
+    text: DM Sans
+    code: DM Mono
+  icon:
+    logo: material/cloud-circle
   favicon: assets/logo.png
 plugins:
-  # - blog:
-  #   blog_dir: blog
-  #   blog_toc: true
+  - social
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      repository: debrid/debrid-wiki
+      branch: main
 markdown_extensions:
   - abbr
   - admonition
@@ -80,7 +90,7 @@ markdown_extensions:
   - pymdownx.magiclink:
       normalize_issue_symbols: true
       repo_url_shorthand: true
-      user: ayushsehrawat
+      user: debrid
       repo: debrid-wiki
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -92,13 +102,16 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - tables
+  - pymdownx.snippets
 extra:
+  homepage: https://debrid.wiki
   status:
     new: Recently added
     deprecated: Deprecated
     social:
       - icon: fontawesome/brands/github
-        link: https://github.com/ayushsehrawat/debrid-wiki
+        link: https://github.com/debrid/debrid-wiki
       - icon: fontawesome/brands/discord
         link: https://discord.gg/wDgVdH8vNM
 copyright: |

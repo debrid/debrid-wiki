@@ -128,3 +128,19 @@ copyright: |
 
 nav:
   - Home: index.md
+  - Debrid Services:
+    - debrid/index.md
+    - Providers:
+      - Real-Debrid: debrid/real-debrid.md
+      - Premiumize: debrid/premiumize.md
+      - AllDebrid: debrid/alldebrid.md
+  - Media Servers:
+    - media/index.md
+  - Content Providers:
+    - content/index.md
+  - Scraping Tools:
+    - scraping/index.md
+  - Community Projects:
+    - projects/index.md
+  - Miscellaneous:
+    - misc/index.md

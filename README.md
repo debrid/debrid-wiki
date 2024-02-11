@@ -54,6 +54,7 @@ mkdocs serve
 ### Link to useful resources of MkDocs Material documentation
 
 - [Search for icons and emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/?h=icons#icons-emojis)
+- [Working with code blocks and embedding files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/)
 
 ---
 

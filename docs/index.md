@@ -1,234 +1,56 @@
-# Welcome to MkDocs
+---
+title: Homepage | Debrid Wiki
+description: Debrid Wiki is a community-driven project that provides information about debrid services, media servers, and other related topics.
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Welcome to Debrid Wiki
 
-## Commands
+This project is a community-driven effort :heart: to provide a comprehensive guide to the debrid services. It is a work in progress and we welcome contributions from the community.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+For guide on how to contribute, visit the [Github repository readme](https://github.com/debrid/debrid-wiki?tab=readme-ov-file#contributing).
 
-## Project layout
+The documentation is divided into the following sections:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<div class="grid cards" markdown>
 
-## Lorem ipsum
+-   :material-cloud-cog:{ .lg .middle } **Debrid Services**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
+    ***
 
-## Doler amet
+    Information about various debrid services, their features, and how to use them.
 
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
+    [:octicons-arrow-right-24: Debrid Services](debrid-services/)
 
+-   :movie_camera:{ .lg .middle } **Media Servers**
 
+    ***
 
-## Lorem ipsum
+    Information about various media servers, their features, and guides on how to setup and integrate them with debrid & other services.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
+    [:octicons-arrow-right-24: Media Servers](media-servers/)
 
-## Doler amet
+-   :simple-vlcmediaplayer:{ .lg .middle } **Content Providers**
 
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
+    ***
 
+    Information and guides on different content providers, like Overseerr, Mdblist, etc.
 
-## Lorem ipsum
+    [:octicons-arrow-right-24: Content Providers](content-providers/)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
+-   :spider_web:{ .lg .middle } **Scraping Services**
 
-## Doler amet
+    ***
 
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
+    Information and guides on different scraping services like Jackett, Prowlarr, etc.
 
+    [:octicons-arrow-right-24: Scraping Services](scraping-services/)
 
-## Lorem ipsum
+-   :busts_in_silhouette:{ .lg .middle } **Community Projects**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
+    ***
 
-## Doler amet
+    Get to know about the community projects and how to setup and use them.
 
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
+    [:octicons-arrow-right-24: Community Projects](community-projects/)
 
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
-## Doler amet
-
-Doler amet sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper ipsum
-
+</div>

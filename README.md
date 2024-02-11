@@ -25,6 +25,7 @@
 - [Contributing](#contributing)
     - [Installation](#installation)
     - [Running](#running)
+    - [Link to useful resources of MkDocs Material documentation](#link-to-useful-resources-of-mkdocs-material-documentation)
 - [Contributors](#contributors)
 - [License](#license)
 
@@ -49,6 +50,10 @@ You also need to install [Cairo Graphics](https://squidfunk.github.io/mkdocs-mat
 ```
 mkdocs serve
 ```
+
+### Link to useful resources of MkDocs Material documentation
+
+- [Search for icons and emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/?h=icons#icons-emojis)
 
 ---
 

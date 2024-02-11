@@ -125,3 +125,6 @@ extra:
         link: https://discord.gg/wDgVdH8vNM
 copyright: |
   &copy; 2024 <a href="https://debrid.wiki">Debrid Wiki</a>
+
+nav:
+  - Home: index.md

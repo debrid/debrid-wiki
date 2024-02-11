@@ -1,11 +1,14 @@
 site_name: Debrid Wiki
 site_url: https://debrid.wiki/
-site_description: All about debrid services and related in one place
+site_description: Unlock the full potential of the debrid services
 repo_name: debrid/debrid-wiki
 repo_url: https://github.com/debrid/debrid-wiki
 edit_uri: edit/main/docs/
+
+# Theme configuration
 theme:
   name: material
+  custom_dir: overrides
   features:
     - announce.dismiss
     - content.action.edit
@@ -54,6 +57,8 @@ theme:
   icon:
     logo: material/cloud-circle
   favicon: assets/logo.png
+
+# Plugins
 plugins:
   - social
   - search:
@@ -63,6 +68,8 @@ plugins:
   - git-committers:
       repository: debrid/debrid-wiki
       branch: main
+
+# Markdown extensions
 markdown_extensions:
   - abbr
   - admonition
@@ -104,6 +111,8 @@ markdown_extensions:
   - pymdownx.tilde
   - tables
   - pymdownx.snippets
+
+# Extra configuration
 extra:
   homepage: https://debrid.wiki
   status:

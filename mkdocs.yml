@@ -65,6 +65,7 @@ plugins:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - git-revision-date-localized:
       enable_creation_date: true
+      type: timeago
   - git-committers:
       repository: debrid/debrid-wiki
       branch: main

@@ -61,6 +61,6 @@ Payment methods include (but not limited to) [credit/debit cards, Amazon pay, Cr
 
 After choosing a Debrid service, you need to sign up for an account and pay for a subscription. Some Debrid services offer free trials, so you can try them out before committing to a subscription. Once you have an account, you can immediately start using the service.
 
-Generally, 1 debrid service is enough for most people. However, some people use multiple debrid services to get the best of both worlds or to have a backup in case one of the debrid services goes down.
+Generally, one debrid service is enough for most people. However, some people use multiple debrid services to get the best of both worlds or to have a backup in case one of the debrid services goes down.
 
 _Thanks to [u/xmachinery](https://www.reddit.com/user/xmachinery/) for the original [Reddit post](https://www.reddit.com/r/Piracy/comments/q3vqgv/introduction_to_debrid_services/) that inspired this section._

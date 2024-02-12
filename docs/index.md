@@ -12,6 +12,8 @@ For guide on how to contribute, visit the [Github repository readme](https://git
 
 The documentation is divided into the following sections:
 
+<!--prettier-ignore-start-->
+
 <div class="grid cards" markdown>
 
 -   :material-cloud-cog:{ .lg .middle } **Debrid Services**
@@ -62,3 +64,5 @@ The documentation is divided into the following sections:
 
     [:octicons-arrow-right-24: Tools & Miscellaneous](misc/index.md)
 </div>
+
+<!--prettier-ignore-end-->

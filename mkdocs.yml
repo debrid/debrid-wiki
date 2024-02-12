@@ -68,6 +68,7 @@ plugins:
   - git-committers:
       repository: debrid/debrid-wiki
       branch: main
+      token: !ENV ["MKDOCS_GIT_COMMITTERS_APIKEY"]
 
 # Markdown extensions
 markdown_extensions:
@@ -114,7 +115,6 @@ markdown_extensions:
 
 # Extra configuration
 extra:
-  homepage: https://debrid.wiki
   status:
     new: Recently added
     deprecated: Deprecated

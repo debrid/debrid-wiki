@@ -45,6 +45,9 @@ pip install -r requirements.txt
 
 You also need to install [Cairo Graphics](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/#cairo-graphics), which is used to make social cards and performing image optimization.
 
+!!! note
+    Optional but recommended: Rename `.env.example` to `.env` and fill in the required environment variables. You can make a personal access token for GitHub [here](https://github.com/settings/personal-access-tokens/new). Make a classic token with no scopes and copy it to the `.env` file.
+
 ### Running
 
 ```

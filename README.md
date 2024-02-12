@@ -22,12 +22,12 @@
 
 ## Table of Contents
 
-- [Contributing](#contributing)
-    - [Installation](#installation)
-    - [Running](#running)
-    - [Link to useful resources of MkDocs Material documentation](#link-to-useful-resources-of-mkdocs-material-documentation)
-- [Contributors](#contributors)
-- [License](#license)
+-   [Contributing](#contributing)
+    -   [Installation](#installation)
+    -   [Running](#running)
+    -   [Link to useful resources of MkDocs Material documentation](#link-to-useful-resources-of-mkdocs-material-documentation)
+-   [Contributors](#contributors)
+-   [License](#license)
 
 ---
 
@@ -45,8 +45,8 @@ pip install -r requirements.txt
 
 You also need to install [Cairo Graphics](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/#cairo-graphics), which is used to make social cards and performing image optimization.
 
-!!! note
-    Optional but recommended: Rename `.env.example` to `.env` and fill in the required environment variables. You can make a personal access token for GitHub [here](https://github.com/settings/personal-access-tokens/new). Make a classic token with no scopes and copy it to the `.env` file.
+> [!NOTE]  
+> Optional but recommended: Rename `.env.example` to `.env` and fill in the required environment variables. You can make a personal access token for GitHub [here](https://github.com/settings/personal-access-tokens/new). Make a classic token with no scopes and copy it to the `.env` file.
 
 ### Running
 
@@ -56,8 +56,8 @@ mkdocs serve
 
 ### Link to useful resources of MkDocs Material documentation
 
-- [Search for icons and emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/?h=icons#icons-emojis)
-- [Working with code blocks and embedding files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/)
+-   [Search for icons and emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/?h=icons#icons-emojis)
+-   [Working with code blocks and embedding files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/)
 
 ---
 

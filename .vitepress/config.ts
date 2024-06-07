@@ -52,6 +52,10 @@ export default defineConfig({
                             },
                         ],
                     },
+                    {
+                        text: "Iceberg",
+                        link: "/iceberg",
+                    },
                 ],
             },
             {

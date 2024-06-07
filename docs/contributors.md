@@ -25,6 +25,15 @@ const members = [
     links: [
       { icon: "github", link: "https://github.com/pukabyte" },
     ]
+  },
+  {
+    avatar: "https://www.github.com/davidemarcoli.png",
+    name: "Davide Marcoli",
+    title: "Iceberg Developer",
+    sponsor: "https://github.com/sponsors/davidemarcoli",
+    links: [
+      { icon: "github", link: "https://github.com/davidemarcoli" },
+    ]
   }
 ]
 </script>

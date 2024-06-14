@@ -1,23 +1,23 @@
 ---
-title: Iceberg
-description: Documentation for Iceberg.
+title: Riven
+description: Documentation for Riven.
 editLink: true
 ---
 
 <div align="center">
-  <a href="https://github.com/dreulavelle/iceberg">
+  <a href="https://github.com/rivenmedia/riven">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dreulavelle/iceberg/main/assets/iceberg-light.png">
-      <img alt="Iceberg" src="https://raw.githubusercontent.com/dreulavelle/iceberg/main/assets/iceberg-dark.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rivenmedia/riven/main/assets/riven-light.png">
+      <img alt="Riven" src="https://raw.githubusercontent.com/dreulavelle/rivenmedia/riven/assets/riven-dark.png">
     </picture>
   </a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/dreulavelle/iceberg/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/dreulavelle/iceberg"></a>
-  <a href="https://github.com/dreulavelle/iceberg/issues"><img alt="Issues" src="https://img.shields.io/github/issues/dreulavelle/iceberg" /></a>
-  <a href="https://github.com/dreulavelle/iceberg/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/dreulavelle/iceberg"></a>
-  <a href="https://github.com/dreulavelle/iceberg/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/dreulavelle/iceberg" /></a>
+  <a href="https://github.com/rivenmedia/riven/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/rivenmedia/riven"></a>
+  <a href="https://github.com/dreulavelle/rivenmedia/riven"><img alt="Issues" src="https://img.shields.io/github/issues/rivenmedia/riven" /></a>
+  <a href="https://github.com/rivenmedia/riven/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/rivenmedia/riven"></a>
+  <a href="https://github.com/rivenmedia/riven/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/rivenmedia/riven" /></a>
   <a href="https://discord.gg/wDgVdH8vNM"><img alt="Discord" src="https://img.shields.io/badge/Join%20discord-8A2BE2" /></a>
 </div>
 
@@ -52,7 +52,7 @@ Scrapers
 
 Check out out [Project Board](https://github.com/users/dreulavelle/projects/2) to stay informed!
 
-Please add feature requests and issues over on our [Issue Tracker](https://github.com/dreulavelle/iceberg/issues) or join our [Discord](https://discord.gg/wDgVdH8vNM) to chat with us!
+Please add feature requests and issues over on our [Issue Tracker](https://github.com/rivenmedia/riven/issues) or join our [Discord](https://discord.gg/wDgVdH8vNM) to chat with us!
 
 We are constantly adding features and improvements as we go along and squashing bugs as they arise.
 
@@ -61,6 +61,7 @@ We are constantly adding features and improvements as we go along and squashing 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [ElfHosted](#elfhosted)
 - [Deployment](#deployment)
   - [Docker Compose](#docker-compose)
     - [What is ORIGIN ?](#what-is-origin-)
@@ -82,7 +83,17 @@ We are constantly adding features and improvements as we go along and squashing 
 - [Contributing](#contributing)
 - [License](#license)
 
----
+## ElfHosted
+
+[ElfHosted](https://elfhosted.com) is a geeky [open-source](https://elfhosted.com/open/) PaaS which provides all the "plumbing" (*hosting, security, updates, etc*) for your self-hosted apps. 
+
+> [!IMPORTANT]
+> Riven is a top-tier app in the [ElfHosted app catalogue](https://elfhosted.com/apps/). 30% of your subscription goes to Riven developers, and the remainder offsets [infrastructure costs](https://elfhosted.com/open/pricing/).
+
+> [!TIP] 
+> New accounts get $10 free credit, enough for a week's free trial of the [Riven / Plex Infinite Streaming](https://store.elfhosted.com/product/infinite-plex-riven-streaming-bundle) bundle!
+
+(*[ElfHosted Discord](https://discord.elfhosted.com)*)
 
 ## Deployment
 
@@ -94,9 +105,9 @@ Create a `docker-compose.yml` file with the following contents:
 version: "3.8"
 
 services:
-    iceberg:
-        image: spoked/iceberg:latest
-        container_name: iceberg
+    riven:
+        image: rivenmedia/riven:latest
+        container_name: riven
         restart: unless-stopped
         environment:
             PUID: "1000"
@@ -105,7 +116,7 @@ services:
         ports:
             - "3000:3000"
         volumes:
-            - ./data:/iceberg/data
+            - ./data:/riven/data
             - /mnt:/mnt
 ```
 
@@ -113,14 +124,14 @@ Then run `docker compose up -d` to start the container in the background. You ca
 
 #### What is ORIGIN ?
 
-`ORIGIN` is the URL of the frontend on which you will access it from anywhere. If you are hosting Iceberg on a vps with IP address `134.32.24.44` then you will need to set the `ORIGIN` to `http://134.32.24.44:3000` (no trailing slash). Similarly, if using a domain name, you will need to set the `ORIGIN` to `http://iceberg.mydomain.com:3000` (no trailing slash). If you change the port in the `docker-compose.yml` file, you will need to change it in the `ORIGIN` as well.
+`ORIGIN` is the URL of the frontend on which you will access it from anywhere. If you are hosting Riven on a vps with IP address `134.32.24.44` then you will need to set the `ORIGIN` to `http://134.32.24.44:3000` (no trailing slash). Similarly, if using a domain name, you will need to set the `ORIGIN` to `http://riven.mydomain.com:3000` (no trailing slash). If you change the port in the `docker-compose.yml` file, you will need to change it in the `ORIGIN` as well.
 
 ### Running outside of Docker
 
 To run outside of docker you will need to have node (v18.13+) and python (3.10+) installed. Then clone the repository
 
 ```sh
-git clone https://github.com/dreulavelle/iceberg.git
+git clone https://github.com/rivenmedia/riven.git
 ```
 
 and open two terminals in the root of the project and run the following commands in each.
@@ -180,7 +191,8 @@ Below is a detailed documentation of the available options in the `settings.json
     - **update_interval**: Frequency in seconds to update Overseerr data. (Integer, Default: 30)
     - **enabled**: Enables or disables Overseerr integration. (Boolean)
     - **url**: URL to access Overseerr. (String)
-    - **api_key**: API key for Overseerr. Get it at `http://OVERSEER_HOST:5055/settings` (String)
+    - **api_key**: API key for Overseerr. Get it at `http://OVERSEER_HOST/settings` (String)
+    - **use_webhook**: Enables or disables the webhook from Overseerr. After enabling this option, you need to go to `http://OVERSEER_HOST/settings/notifications/webhook`, enable the agent and input `http://RIVEN_HOST/webhook/overseerr` into the Webhook URL field.
   - **plex_watchlist**:
     - **update_interval**: Frequency in seconds to check for Plex Watchlist changes. (Integer, Default: 60)
     - **enabled**: Enables or disables Plex Watchlist. (Boolean)
@@ -248,7 +260,7 @@ Below is a detailed documentation of the available options in the `settings.json
 <h1 style="color: red">SPOKED NEEDS TO DO THAT</h1>
 
 
-This configuration file allows for extensive customization of the behavior of iceberg, including integration with various services and control over downloading and scraping operations. Each section and its options can be tailored to meet specific needs or preferences.
+This configuration file allows for extensive customization of the behavior of Riven, including integration with various services and control over downloading and scraping operations. Each section and its options can be tailored to meet specific needs or preferences.
 
 
 ### Symlinking settings
@@ -261,9 +273,9 @@ This configuration file allows for extensive customization of the behavior of ic
 
 #### Example:
 
-Rclone is mounted to /iceberg/vfs on your host machine -> settings should have: "host_mount": "/iceberg/vfs"
+Rclone is mounted to /riven/vfs on your host machine -> settings should have: "host_mount": "/riven/vfs"
 
-Plex container volume configuration for rclone mount is "/iceberg/vfs:/media/vfs" -> settings should have: "container_mount": "/media/vfs"
+Plex container volume configuration for rclone mount is "/riven/vfs:/media/vfs" -> settings should have: "container_mount": "/media/vfs"
 
 Plex libraries you want to add to sections: movies -> /media/library/movies, shows -> /media/library/shows
 
@@ -271,13 +283,15 @@ Plex libraries you want to add to sections: movies -> /media/library/movies, sho
 
 ## Development
 
+![Flowchart](../public/riven/flowchart.png)
+
 You can view the readme in `make` to get started!
 
 ```sh
 make
 ```
 
-To get started you can simply do this. This will stop any previous Iceberg containers and remove previous image.
+To get started you can simply do this. This will stop any previous Riven containers and remove previous image.
 As well as rebuild the image using cached layers. If your a developer, then any files changed in the code will not get cached,
 and thus rebuilt in the image.
 
@@ -321,8 +335,8 @@ Poetry also simplifies the process of adding new dependencies or updating existi
 
 ---
 
-<a href="https://github.com/dreulavelle/iceberg/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=dreulavelle/iceberg" />
+<a href="https://github.com/rivenmedia/riven/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=rivenmedia/riven" />
 </a>
 
 ---

@@ -53,8 +53,8 @@ export default defineConfig({
                         ],
                     },
                     {
-                        text: "Iceberg",
-                        link: "/iceberg",
+                        text: "Riven",
+                        link: "/riven",
                     },
                 ],
             },

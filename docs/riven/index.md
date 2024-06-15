@@ -77,8 +77,6 @@ We are constantly adding features and improvements as we go along and squashing 
   - [Scraping Settings](#scraping-settings)
   - [Ranking Settings](#ranking-settings)
   - [Indexer Settings](#indexer-settings)
-  - [Symlinking settings](#symlinking-settings)
-    - [Example:](#example)
 - [Development](#development)
   - [Development without `make`](#development-without-make)
 - [Contributing](#contributing)
@@ -275,16 +273,15 @@ Below is a detailed documentation of the available options in the `settings.json
     - **catalogs**: List of catalogs that should be used. You can find all the catalogs [here](https://github.com/mhdzumair/MediaFusion/blob/main/utils/const.py) (String Array)
 
 ### Ranking Settings
-<h1 style="color: red">SPOKED NEEDS TO DO THAT</h1>
-
-
-This configuration file allows for extensive customization of the behavior of Riven, including integration with various services and control over downloading and scraping operations. Each section and its options can be tailored to meet specific needs or preferences.
+All ranking settings are explained in the [RTN README](https://github.com/dreulavelle/rank-torrent-name/)
 
 ### Indexer Settings
 - **indexer**:
   - **update_interval**: Interval in seconds in which the indexer gets resubmitted. (Integer, Default: 3600)
 
-### Symlinking settings
+This configuration file allows for extensive customization of the behavior of Riven, including integration with various services and control over downloading and scraping operations. Each section and its options can be tailored to meet specific needs or preferences.
+
+<!-- ### Symlinking settings
 
 <h1 style="color: red">IS THIS SECTION STILL NEEDED? OR SHOULD THIS BE EXPLAINED ABOVE?</h1>
 
@@ -300,7 +297,7 @@ Plex container volume configuration for rclone mount is "/riven/vfs:/media/vfs" 
 
 Plex libraries you want to add to sections: movies -> /media/library/movies, shows -> /media/library/shows
 
----
+--- -->
 
 ## Development
 

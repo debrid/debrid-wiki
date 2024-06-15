@@ -76,6 +76,7 @@ We are constantly adding features and improvements as we go along and squashing 
   - [Content Management](#content-management)
   - [Scraping Settings](#scraping-settings)
   - [Ranking Settings](#ranking-settings)
+  - [Indexer Settings](#indexer-settings)
   - [Symlinking settings](#symlinking-settings)
     - [Example:](#example)
 - [Development](#development)
@@ -162,8 +163,11 @@ Below is a detailed documentation of the available options in the `settings.json
 
 ### General Settings
 - **version**: Specifies the version of application. (String)
-- **debug**: Enables or disables debug mode. (Boolean)
-- **log**: Enables or disables logging. (Boolean)
+- **debug**: Enables or disables debug mode. (Boolean, Default: True)
+- **log**: Enables or disables logging. (Boolean, Default: True)
+- **symlink_monitor**: Enables or disables the monitoring of symlinks. Used to propagate plex deletions to the system files. (Boolean, Default: True, inotify needs to be supported in your environment)
+- **force_refresh**: Reload your library into plex (Boolean, Default: False)
+- **local_only**: Removes the requirement to have plex configured, item gets completed after being symlinked. (Boolean, Default: False)
 
 ### Plex Settings
 - **plex**:
@@ -213,6 +217,7 @@ Below is a detailed documentation of the available options in the `settings.json
     - **enabled**: Enables or disables Mdblist integration. (Boolean)
     - **api_key**: API key for Trakt. Create a new API App [here](https://trakt.tv/oauth/applications) and copy the client id (String)
     - **watchlist**: Usernames of which the watchlists should be fetched (String Array)
+    - **collection**: Usernames of which the collections should be fetched (String Array)
     - **user_lists**: URLs of user lists the should be fetched (String Array)
     - **fetch_treding**: Wheter the trakt trending [movies](https://trakt.tv/movies/trending) and [shows](https://trakt.tv/shows/trending) should be fetched. (Boolean)
     - **trending_count**: How many items from the trending lists should be fetched. Most trending item gets fetched first. (Integer, Default: 10)
@@ -226,34 +231,47 @@ Below is a detailed documentation of the available options in the `settings.json
   - **after_10**: Delay in hours after which scraping occurs again after 10 retries. (Integer, Default: 24)
   - **torrentio**:
     - **enabled**: Enables or disables torrentio scraping. (Boolean)
-    - **filter**: Filter that should be used when querying scraper (String, Default: `sort=qualitysize%7Cqualityfilter=480p,scr,cam,unknown`)
+    - **filter**: Filter that should be used when querying scraper. (String, Default: `sort=qualitysize%7Cqualityfilter=480p,scr,cam,unknown`)
     - **url**: URL of the torrentio instance. (String, Default: `https://torrentio.strem.fun`)
+    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
+    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
   - **knightcrawler**:
     - **enabled**: Enables or disables knightcrawler scraping. (Boolean)
     - **filter**: Filter that should be used when querying scraper (String, Default: `sort=qualitysize%7Cqualityfilter=480p,scr,cam,unknown`)
     - **url**: URL of the knightcrawler instance. (String, Default: `https://knightcrawler.elfhosted.com`)
+    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
+    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
   - **jackett**:
     - **enabled**: Enables or disables jackett scraping. (Boolean)
     - **url**: URL of the jackett instance. (String, Default: `http://localhost:9117`)
     - **api_key**: API key for jackett. Get it at your jackett dashboard. (String)
+    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
+    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
   - **prowlarr**:
     - **enabled**: Enables or disables prowlarr scraping. (Boolean)
     - **url**: URL of the prowlarr instance. (String, Default: `http://localhost:9696`)
     - **api_key**: API key for prowlarr. Get it at your prowlarr dashboard. (String)
+    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
+    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
   - **orionoid**:
     - **enabled**: Enables or disables orionoid scraping. (Boolean)
     - **api_key**: API key for orioniod. Get it [here](https://panel.orionoid.com/). (String)
     - **limitcount**: Maximum amount of results from this scraper. (Integer, Default: 5)
+    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
+    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
   - **annatar**:
     - **enabled**: Enables or disables annatar scraping. (Boolean)
     - **url**: URL of the annatar instance. (String, Default: `https://annatar.elfhosted.com`)
     - **limit**: Filter that should be used when querying scraper Maximum amount of results from this scraper. (Integer, Default: 2000)
-    - **timeout**: Maximum amount in seconds for the scraping process. (Integer: Default: 10)
+    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
+    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
   - **torbox_scraper**:
     - **enabled**: Enables or disables torbox scraping. Only works in combination with the torbox downloader. (Boolean)
   - **mediafusion**:
     - **enabled**: Enables or disables mediafusion scraping. (Boolean)
     - **url**: URL of the mediafusion instance. (String, Default: `https://mediafusion.elfhosted.com`)
+    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
+    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
     - **catalogs**: List of catalogs that should be used. You can find all the catalogs [here](https://github.com/mhdzumair/MediaFusion/blob/main/utils/const.py) (String Array)
 
 ### Ranking Settings
@@ -262,6 +280,9 @@ Below is a detailed documentation of the available options in the `settings.json
 
 This configuration file allows for extensive customization of the behavior of Riven, including integration with various services and control over downloading and scraping operations. Each section and its options can be tailored to meet specific needs or preferences.
 
+### Indexer Settings
+- **indexer**:
+  - **update_interval**: Interval in seconds in which the indexer gets resubmitted. (Integer, Default: 3600)
 
 ### Symlinking settings
 

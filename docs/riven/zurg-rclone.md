@@ -6,7 +6,61 @@ editLink: true
 
 # Zurg/Rclone
 
-For optimal performance with Riven, we recommend using Zurg with Rclone. Here's a suggested `zurg.yaml` configuration:
+For optimal performance with Riven, we recommend using Zurg with Rclone.
+Here's a sample systemd service file for mounting Rclone with Zurg:
+
+```/etc/systemd/system/rclone.service```
+
+```
+[Unit]
+Description=Rclone Mount Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount zurg:__all__ /mnt/zurg --allow-other --dir-cache-time 10s --vfs-cache-mode full --vfs-read-chunk-size 8M --vfs-read-chunk-size-limit 2G --buffer-size 16M --vfs-cache-max-age 150h --vfs-cache-max-size 20G --vfs-fast-fingerprint
+ExecStop=/bin/fusermount -u /mnt/zurg
+Restart=always
+User=spoked
+Group=spoked
+
+[Install]
+WantedBy=default.target
+```
+
+> [!NOTE]
+> This service file will mount your Zurg remote to `/mnt/zurg` using Rclone. Make sure to adjust the `User` and `Group` fields as necessary for your system.
+
+Here's a sample systemd service file for starting Zurg:
+
+```/etc/systemd/system/zurg.service```
+
+```
+[Unit]
+Description=zurg
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=spoked
+ExecStart=/root/zurgfiles/zurg
+WorkingDirectory=/root/zurgfiles
+StandardOutput=file:/var/log/zurg.log
+StandardError=file:/var/log/zurg.log
+Restart=on-abort
+RestartSec=10
+StartLimitInterval=45
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+> [!NOTE]
+> This service file will start http Zurg. Make sure to adjust the `User` field as necessary for your system.
+
+Here's a suggested `zurg.yaml` configuration:
 
 ```yaml
 # basic functionality
@@ -42,28 +96,23 @@ directories:
 
 > [!NOTE]
 > This configuration provides a good starting point for using Zurg with Riven. Adjust the settings as needed based on your specific requirements and system capabilities.
-
-Additionally, here's a sample systemd service file for mounting Rclone with Zurg:
-
-```/etc/systemd/system/rclone.service```
+> 
+Here's a suggested `rclone.conf` configuration:
 
 ```
-[Unit]
-Description=Rclone Mount Service
-After=network.target
+[realdebrid]
+type = realdebrid
+api_key = TOKENHERE
 
-[Service]
-Type=simple
-ExecStart=/usr/bin/rclone mount zurg:__all__ /mnt/zurg --allow-other --dir-cache-time 10s --vfs-cache-mode full --vfs-read-chunk-size 8M --vfs-read-chunk-size-limit 2G --buffer-size 16M --vfs-cache-max-age 150h --vfs-cache-max-size 20G --vfs-fast-fingerprint
-ExecStop=/bin/fusermount -u /mnt/zurg
-Restart=always
-User=spoked
-Group=spoked
-
-[Install]
-WantedBy=default.target
+[zurg]
+type = webdav
+url = http://localhost:9999/dav
+vendor = other
+pacer_min_sleep = 0
+ 
+[zurghttp]
+type = http
+url = http://localhost:9999/http
+no_head = false
+no_slash = false
 ```
-
-> [!NOTE]
-> This service file will mount your Zurg remote to `/mnt/zurg` using Rclone. Make sure to adjust the `User` and `Group` fields as necessary for your system.
-

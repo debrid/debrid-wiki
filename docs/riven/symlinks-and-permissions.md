@@ -10,15 +10,7 @@ Riven uses a symlink-based system to efficiently manage media files. This page p
 
 ## Flowchart: Symlink Function in Riven
 
-```mermaid
-graph TD
-    A[Download Completed] -->|File Available| B[Create Symlink]
-    B --> C{Check Permissions}
-    C -->|Correct| D[Symlink Created Successfully]
-    C -->|Incorrect| E[Adjust Permissions]
-    E --> B
-    D --> F[Update Media Server Library]
-```
+![Symlink flowchart](symlinksflowchart.png)
 
 This flowchart illustrates the symlink creation process in Riven:
 

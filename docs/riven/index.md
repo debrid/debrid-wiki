@@ -40,6 +40,42 @@ Riven streamlines your media consumption experience by:
 
 Whether you're a casual viewer or a media enthusiast, Riven offers a powerful, automated solution to keep your media library up-to-date and easily accessible.
 
+## Table of Contents
+
+- [What is Riven?](#what-is-riven)
+- [Supported Services](#supported-services)
+- [Key Features](#key-features)
+- [Main Components and Their Roles](#main-components-and-their-roles)
+  - [Flowchart: How Riven Components Work Together](#flowchart-how-riven-components-work-together)
+- [ElfHosted](#elfhosted)
+- [Self Hosted](#self-hosted)
+  - [Docker Compose](#docker-compose)
+    - [What is ORIGIN?](#what-is-origin)
+  - [Running outside of Docker](#running-outside-of-docker)
+    - [First terminal:](#first-terminal)
+    - [Second terminal:](#second-terminal)
+  - [Symlinking Settings](#symlinking-settings)
+- [Zurg/Rclone](#zurgrclone)
+- [Riven Settings.json](#riven-settingsjson)
+- [Symlinks and Permissions](#symlinks-and-permissions)
+  - [Flowchart: Symlink Function in Riven](#flowchart-symlink-function-in-riven)
+  - [Key Components](#key-components)
+  - [Example Terminal Output](#example-terminal-output)
+- [Development](#development)
+  - [Prerequisites](#prerequisites)
+  - [Initial Setup](#initial-setup)
+  - [Using `make` for Development](#using-make-for-development)
+  - [Development without `make`](#development-without-make)
+  - [Additional Tips](#additional-tips)
+- [Contributing](#contributing)
+  - [Submitting Changes](#submitting-changes)
+  - [Code Formatting](#code-formatting)
+  - [Dependency Management](#dependency-management)
+    - [Setting Up Your Environment](#setting-up-your-environment)
+    - [Adding or Updating Dependencies](#adding-or-updating-dependencies)
+  - [Running Tests and Linters](#running-tests-and-linters)
+- [License](#license)
+
 ## Supported Services
 
 | Service                                              | Supported |
@@ -114,43 +150,6 @@ This flowchart illustrates the main components of Riven and how they interact:
 6. Finally, the organized and updated media is available in the media server for streaming.
 
 User preferences influence both the Content Discovery and Scraper components, ensuring that the entire process aligns with the user's media preferences and quality settings.
-
-## Table of Contents
-
-- [What is Riven?](#what-is-riven)
-- [Supported Services](#supported-services)
-- [Key Features](#key-features)
-- [Main Components and Their Roles](#main-components-and-their-roles)
-  - [Flowchart: How Riven Components Work Together](#flowchart-how-riven-components-work-together)
-- [Table of Contents](#table-of-contents)
-- [ElfHosted](#elfhosted)
-- [Self Hosted](#self-hosted)
-  - [Docker Compose](#docker-compose)
-    - [What is ORIGIN?](#what-is-origin)
-  - [Running outside of Docker](#running-outside-of-docker)
-    - [First terminal:](#first-terminal)
-    - [Second terminal:](#second-terminal)
-  - [Symlinking Settings](#symlinking-settings)
-- [Zurg/Rclone](#zurgrclone)
-- [Riven Settings.json](#riven-settingsjson)
-- [Symlinks and Permissions](#symlinks-and-permissions)
-  - [Flowchart: Symlink Function in Riven](#flowchart-symlink-function-in-riven)
-  - [Key Components](#key-components)
-  - [Example Terminal Output](#example-terminal-output)
-- [Development](#development)
-  - [Prerequisites](#prerequisites)
-  - [Initial Setup](#initial-setup)
-  - [Using `make` for Development](#using-make-for-development)
-  - [Development without `make`](#development-without-make)
-  - [Additional Tips](#additional-tips)
-- [Contributing](#contributing)
-  - [Submitting Changes](#submitting-changes)
-  - [Code Formatting](#code-formatting)
-  - [Dependency Management](#dependency-management)
-    - [Setting Up Your Environment](#setting-up-your-environment)
-    - [Adding or Updating Dependencies](#adding-or-updating-dependencies)
-  - [Running Tests and Linters](#running-tests-and-linters)
-- [License](#license)
 
 ## ElfHosted
 

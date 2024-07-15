@@ -10,9 +10,5 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
-  },
-  "dependencies": {
-    "bun": "^1.1.20",
-    "pnpm": "^9.5.0"
   }
 }

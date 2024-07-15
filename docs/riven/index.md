@@ -137,7 +137,8 @@ graph TD
     E -->|Updated library| F[Media Server]
     G[User Preferences] -->|Influences| A
     G -->|Filters| B
-    I[External Services] -->|Provide data| A
+    H[External Services] -->|Provide data| A
+    I[Download Service] -->|Manages| C
 ```
 
 This flowchart illustrates the main components of Riven and how they interact:
@@ -149,7 +150,7 @@ This flowchart illustrates the main components of Riven and how they interact:
 5. The Media Server Updater then ensures the media server library is updated with the new content.
 6. Finally, the organized and updated media is available in the media server for streaming.
 
-User preferences influence both the Content Discovery and Scraper components, ensuring that the entire process aligns with the user's media preferences and quality settings.
+User preferences influence both the Content Discovery and Scraper components, ensuring that the entire process aligns with the user's media preferences and quality settings. The Download Service (e.g., Real-Debrid) is explicitly shown as managing the Downloader component.
 
 ## ElfHosted
 

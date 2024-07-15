@@ -235,39 +235,6 @@ poetry install --without dev
 poetry run python backend/main.py
 ```
 
-### Symlinking Settings
-
-> [!IMPORTANT]
-> Correct symlink settings are crucial for Riven to function properly with your media server.
-
-Riven uses a symlink-based system to efficiently manage media files. Here are the key settings:
-
-- `rclone_path`: Should point to your rclone mount that has your torrents on your host (e.g., `/mnt/zurg`).
-- `library_path`: Should point to the location of the mount in your media server container (e.g., `/mnt/library`).
-
-Example configuration:
-```json
-"symlink": {
-    "rclone_path": "/mnt/zurg",
-    "library_path": "/mnt/library"
-    "separate_anime_dirs": false
-}
-```
-
-> [!TIP]
-> Double-check your paths to ensure they match your system's configuration.
-
-By default, Riven creates the following directories:
-
-| Type         | Categories     |
-| ------------ | -------------- |
-| Movies       | `movies`       |
-| Shows        | `shows`        |
-| Anime        | `anime_shows`  |
-| Anime Movies | `anime_movies` |
-
-> [!NOTE]
-> The anime directories (`anime_movies` and `anime_shows`) are created by default but are not used unless the `separate_anime_dirs` option is `true` in `settings.json`. This allows for more flexible organization based on user preferences.
 
 
 ## Riven Settings.json

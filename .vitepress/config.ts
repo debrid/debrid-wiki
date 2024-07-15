@@ -57,9 +57,9 @@ export default defineConfig({
                         link: "/riven/",
                         items: [
                             { text: "Overview", link: "/riven/" },
-                            { text: "Development", link: "/riven/development" },
                             { text: "Zurg/Rclone", link: "/riven/zurg-rclone" },
-                            { text: "Symlinks and Permissions", link: "/riven/symlinks-and-permissions" }
+                            { text: "Symlinks and Permissions", link: "/riven/symlinks-and-permissions" },
+                            { text: "Development", link: "/riven/development" }
                         ]
                     },
                 ],

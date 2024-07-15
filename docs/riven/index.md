@@ -7,7 +7,7 @@ editLink: true
 <div align="center">
   <a href="https://github.com/rivenmedia/riven">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rivenmedia/riven/main/assets/riven-light.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dreulavelle/iceberg/main/assets/iceberg-light.png">
       <img alt="Riven" src="https://raw.githubusercontent.com/dreulavelle/rivenmedia/riven/assets/riven-dark.png">
     </picture>
   </a>
@@ -117,16 +117,21 @@ User preferences influence both the Content Discovery and Scraper components, en
 
 ## Table of Contents
 
+- [What is Riven?](#what-is-riven)
+- [Supported Services](#supported-services)
+- [Key Features](#key-features)
+- [Main Components and Their Roles](#main-components-and-their-roles)
+  - [Flowchart: How Riven Components Work Together](#flowchart-how-riven-components-work-together)
 - [Table of Contents](#table-of-contents)
 - [ElfHosted](#elfhosted)
 - [Self Hosted](#self-hosted)
   - [Docker Compose](#docker-compose)
     - [What is ORIGIN?](#what-is-origin)
   - [Running outside of Docker](#running-outside-of-docker)
-    - [First terminal](#first-terminal)
-    - [Second terminal](#second-terminal)
+    - [First terminal:](#first-terminal)
+    - [Second terminal:](#second-terminal)
   - [Symlinking Settings](#symlinking-settings)
-- [Zurg/Rclone](#zurg-rclone)
+- [Zurg/Rclone](#zurgrclone)
 - [Riven Settings.json](#riven-settingsjson)
 - [Symlinks and Permissions](#symlinks-and-permissions)
   - [Flowchart: Symlink Function in Riven](#flowchart-symlink-function-in-riven)

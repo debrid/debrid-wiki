@@ -7,111 +7,171 @@ editLink: true
 <div align="center">
   <a href="https://github.com/rivenmedia/riven">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rivenmedia/riven/main/assets/riven-light.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dreulavelle/iceberg/main/assets/iceberg-light.png">
       <img alt="Riven" src="https://raw.githubusercontent.com/dreulavelle/rivenmedia/riven/assets/riven-dark.png">
     </picture>
   </a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/rivenmedia/riven/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/rivenmedia/riven"></a>
-  <a href="https://github.com/dreulavelle/rivenmedia/riven"><img alt="Issues" src="https://img.shields.io/github/issues/rivenmedia/riven" /></a>
-  <a href="https://github.com/rivenmedia/riven/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/rivenmedia/riven"></a>
-  <a href="https://github.com/rivenmedia/riven/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/rivenmedia/riven" /></a>
-  <a href="https://discord.gg/wDgVdH8vNM"><img alt="Discord" src="https://img.shields.io/badge/Join%20discord-8A2BE2" /></a>
+  <a href="https://github.com/rivenmedia/riven/stargazers" style="display: inline-block; margin-right: 10px;">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/rivenmedia/riven" />
+  </a>
+  <a href="https://github.com/rivenmedia/riven/issues" style="display: inline-block; margin-right: 10px;">
+    <img alt="Issues" src="https://img.shields.io/github/issues/rivenmedia/riven" />
+  </a>
+  <a href="https://github.com/rivenmedia/riven/blob/main/LICENSE" style="display: inline-block; margin-right: 10px;">
+    <img alt="License" src="https://img.shields.io/github/license/rivenmedia/riven" />
+  </a>
+  <a href="https://github.com/rivenmedia/riven/graphs/contributors" style="display: inline-block; margin-right: 10px;">
+    <img alt="Contributors" src="https://img.shields.io/github/contributors/rivenmedia/riven" />
+  </a>
+  <a href="https://discord.gg/wDgVdH8vNM" style="display: inline-block;">
+    <img alt="Discord" src="https://img.shields.io/badge/Join%20discord-8A2BE2" />
+  </a>
 </div>
+
+
+
 
 <div align="center">
   <p>Plex torrent streaming through Real Debrid and 3rd party services like Overseerr, Mdblist, etc.</p>
   <p>Rewrite of <a target="_blank" href="https://github.com/itsToggle/plex_debrid">plex_debrid project.</a></p>
 </div>
 
-### Supported Services
+## What is Riven?
 
-Downloaders
--   ✅ Real Debrid
--   ✅ Torbox
+Riven is an advanced media management and streaming solution designed to integrate with various media servers and third-party services. It automates the process of finding, downloading, and organizing media content, making it instantly available for streaming through your preferred media server.
 
-Content Services
-- ✅ Overseerr
-- ✅ Plex Watchlist
-- ✅ Mdblist
-- ✅ Listrr
-- ✅ Trakt
+Riven streamlines your media consumption experience by:
 
-Scrapers
--   ✅ Torrentio
--   ✅ Knightcrawler
--   ✅ Jackett
--   ⏳ Prowlarr (Coming soon)
--   ✅ Orionoid
--   ✅ Annatar
--   ✅ Torbox
--   ✅ Mediafusion
--   ⏳ and more to come!
+1. Automatically discovering new content based on your preferences and watchlists.
+2. Efficiently searching for and downloading high-quality media files.
+3. Organizing your media library using a smart symlink system.
+4. Seamlessly integrating with your chosen media server for immediate streaming access.
+5. Providing a user-friendly web interface for easy management and configuration.
 
-Check out out [Project Board](https://github.com/users/dreulavelle/projects/2) to stay informed!
-
-Please add feature requests and issues over on our [Issue Tracker](https://github.com/rivenmedia/riven/issues) or join our [Discord](https://discord.gg/wDgVdH8vNM) to chat with us!
-
-We are constantly adding features and improvements as we go along and squashing bugs as they arise.
-
----
+Whether you're a casual viewer or a media enthusiast, Riven offers a powerful, automated solution to keep your media library up-to-date and easily accessible.
 
 ## Table of Contents
 
+- [What is Riven?](#what-is-riven)
 - [Table of Contents](#table-of-contents)
+- [Supported Services](#supported-services)
+- [Key Features](#key-features)
+- [Main Components and Their Roles](#main-components-and-their-roles)
+  - [Flowchart: How Riven Components Work Together](#flowchart-how-riven-components-work-together)
 - [ElfHosted](#elfhosted)
-- [Deployment](#deployment)
+- [Self Hosted](#self-hosted)
   - [Docker Compose](#docker-compose)
-    - [What is ORIGIN ?](#what-is-origin-)
+    - [What is ORIGIN?](#what-is-origin)
   - [Running outside of Docker](#running-outside-of-docker)
     - [First terminal:](#first-terminal)
     - [Second terminal:](#second-terminal)
-- [Settings](#settings)
-  - [General Settings](#general-settings)
-  - [Plex Settings](#plex-settings)
-  - [Symlink Settings](#symlink-settings)
-  - [Downloaders](#downloaders)
-  - [Content Management](#content-management)
-  - [Scraping Settings](#scraping-settings)
-  - [Ranking Settings](#ranking-settings)
-  - [Indexer Settings](#indexer-settings)
+- [Riven Settings.json](#riven-settingsjson)
+- [Symlinks and Permissions](#symlinks-and-permissions)
 - [Development](#development)
-  - [Development without `make`](#development-without-make)
 - [Contributing](#contributing)
 - [License](#license)
 
+## Supported Services
+
+| Service                                              | Supported |
+| ---------------------------------------------------- | --------- |
+| Download Services (Real-Debrid, *AllDebrid, Torbox*) | ✅         |
+| Media Server (Plex, *Jellyfin, Emby*)                | ✅         |
+| Overseerr                                            | ✅         |
+| Mdblist                                              | ✅         |
+| Trakt                                                | ✅         |
+| Jackett                                              | ✅         |
+| Media Server Watchlist                               | ✅         |
+| Torrentio                                            | ✅         |
+| Orionoid                                             | ✅         |
+| Zilean                                               | ✅         |
+| Listrr                                               | ✅         |
+
+And more to come! Check out our [Project Board](https://github.com/users/dreulavelle/projects/2) to stay informed about upcoming features and integrations.
+
+We welcome feature requests and bug reports. Please use our [Issue Tracker](https://github.com/dreulavelle/iceberg/issues) or join our [Discord](https://discord.gg/wDgVdH8vNM) to get involved with the community.
+
+## Key Features
+
+- Automated media discovery and download through multiple sources
+- Integration with various Download Services for high-speed downloads
+- Seamless media server library management
+- Support for various third-party services for content curation
+- Efficient symlink-based file management
+
+## Main Components and Their Roles
+
+1. **Content Discovery**:
+   - Integrates with services like Overseerr, Mdblist, Trakt, etc.
+   - Finds new media to download based on user preferences and watchlists
+
+2. **Scraper**:
+   - Searches for torrent files across various sources
+   - Filters results based on quality preferences
+
+3. **Downloader**:
+   - Manages downloads through Real-Debrid
+   - Handles torrent to direct download conversion
+
+4. **Symlinker**:
+   - Creates symbolic links to organize downloaded files
+   - Manages the structure of the Plex library
+
+5. **Media Server Updater**:
+   - Keeps the media server library in sync with downloaded content
+   - Manages metadata and organization within the media server
+
+### Flowchart: How Riven Components Work Together
+
+![Components flowchart](componentsflowchart.png)
+
+
+This flowchart illustrates the main components of Riven and how they interact:
+
+1. Content Discovery starts the process by finding new media based on user preferences and external services.
+2. The Scraper then searches for appropriate torrent files for the discovered media.
+3. The Downloader, integrated with the chosen Download Service, manages the actual file downloads.
+4. Once downloaded, the Symlinker organizes the files using symbolic links.
+5. The Media Server Updater then ensures the media server library is updated with the new content.
+6. Finally, the organized and updated media is available in the media server for streaming.
+
+User preferences influence both the Content Discovery and Scraper components, ensuring that the entire process aligns with the user's media preferences and quality settings. The Download Service (e.g., Real-Debrid) is explicitly shown as managing the Downloader component.
+
 ## ElfHosted
 
-[ElfHosted](https://elfhosted.com) is a geeky [open-source](https://elfhosted.com/open/) PaaS which provides all the "plumbing" (*hosting, security, updates, etc*) for your self-hosted apps. 
+[ElfHosted](https://elfhosted.com) is a geeky [open-source](https://elfhosted.com/open/) PaaS which provides all the "plumbing" (_hosting, security, updates, etc_) for your self-hosted apps.
 
 > [!IMPORTANT]
 > Riven is a top-tier app in the [ElfHosted app catalogue](https://elfhosted.com/apps/). 30% of your subscription goes to Riven developers, and the remainder offsets [infrastructure costs](https://elfhosted.com/open/pricing/).
 
-> [!TIP] 
+> [!TIP]
 > New accounts get $10 free credit, enough for a week's free trial of the [Riven / Plex Infinite Streaming](https://store.elfhosted.com/product/infinite-plex-riven-streaming-bundle) bundle!
 
-(*[ElfHosted Discord](https://discord.elfhosted.com)*)
+(_[ElfHosted Discord](https://discord.elfhosted.com)_)
 
-## Deployment
+## Self Hosted
 
 ### Docker Compose
 
-Create a `docker-compose.yml` file with the following contents:
+> [!IMPORTANT]
+> Before you begin, ensure you have Docker and Docker Compose installed on your system.
+
+Create a `docker-compose.yml` file with the following contents: 
 
 ```yml
-version: "3.8"
-
 services:
     riven:
-        image: rivenmedia/riven:latest
+        image: spoked/riven:latest
         container_name: riven
         restart: unless-stopped
         environment:
             PUID: "1000"
             PGID: "1000"
-            ORIGIN: "http://localhost:3000" # read below for more info
+            ORIGIN: "http://localhost:3000" # ORIGIN: read below to avoid CORS issues
+            BACKEND_URL: http://127.0.0.1:8080 # optional
         ports:
             - "3000:3000"
         volumes:
@@ -121,16 +181,25 @@ services:
 
 Then run `docker compose up -d` to start the container in the background. You can then access the web interface at `http://localhost:3000` or whatever port and origin you set in the `docker-compose.yml` file.
 
-#### What is ORIGIN ?
+> [!TIP]
+> On first run, Riven creates a `settings.json` file in the `data` directory. You can edit the settings from frontend, or manually edit the file and restart the container or use `.env` or docker-compose environment variables to set the settings (see `.env.example` for reference).
 
-`ORIGIN` is the URL of the frontend on which you will access it from anywhere. If you are hosting Riven on a vps with IP address `134.32.24.44` then you will need to set the `ORIGIN` to `http://134.32.24.44:3000` (no trailing slash). Similarly, if using a domain name, you will need to set the `ORIGIN` to `http://riven.mydomain.com:3000` (no trailing slash). If you change the port in the `docker-compose.yml` file, you will need to change it in the `ORIGIN` as well.
+#### What is ORIGIN?
+
+> [!IMPORTANT]
+> Setting the correct ORIGIN is crucial to avoid CORS issues and ensure proper functionality.
+
+`ORIGIN` is the URL of the frontend on which you will access it from anywhere. If you are hosting Riven on a vps with IP address `123.45.67.890` then you will need to set the `ORIGIN` to `http://123.45.67.890:3000` (no trailing slash). Similarly, if using a domain name, you will need to set the `ORIGIN` to `http://riven.example.com:3000` (no trailing slash). If you change the port in the `docker-compose.yml` file, you will need to change it in the `ORIGIN` as well.
 
 ### Running outside of Docker
+
+> [!TIP]
+> Running outside of Docker can be useful for development or if you prefer more control over the environment.
 
 To run outside of docker you will need to have node (v18.13+) and python (3.10+) installed. Then clone the repository
 
 ```sh
-git clone https://github.com/rivenmedia/riven.git
+git clone https://github.com/rivenmedia/riven.git && cd riven
 ```
 
 and open two terminals in the root of the project and run the following commands in each.
@@ -141,7 +210,7 @@ and open two terminals in the root of the project and run the following commands
 cd frontend
 npm install
 npm run build
-ORIGIN=http://localhost:3000 node build
+ORIGIN=http://localhost:3000 BACKEND_URL=http://127.0.0.1 node build
 ```
 
 Read above for more info on `ORIGIN`.
@@ -149,217 +218,33 @@ Read above for more info on `ORIGIN`.
 #### Second terminal:
 
 ```sh
-pip install -r requirements.txt
-python backend/main.py
+pip install poetry
+poetry install --without dev
+poetry run python backend/main.py
 ```
+## Riven Settings.json
 
----
+For detailed information on how Riven uses `settings.json` file, please see the [Settings.json](./settings.md) page.
 
-## Settings
+## Symlinks and Permissions
 
-Below is a detailed documentation of the available options in the `settings.json` configuration file.
-
-### General Settings
-- **version**: Specifies the version of application. (String)
-- **debug**: Enables or disables debug mode. (Boolean, Default: True)
-- **log**: Enables or disables logging. (Boolean, Default: True)
-- **symlink_monitor**: Enables or disables the monitoring of symlinks. Used to propagate plex deletions to the system files. (Boolean, Default: True, inotify needs to be supported in your environment)
-- **force_refresh**: Reload your library into plex (Boolean, Default: False)
-- **local_only**: Removes the requirement to have plex configured, item gets completed after being symlinked. (Boolean, Default: False)
-
-### Plex Settings
-- **plex**:
-  - **update_interval**: Frequency in seconds to update Plex library. (Integer, Default: 120)
-  - **token**: Authentication token for Plex API. [How to get a plex token](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/) (String)
-  - **url**: URL to access Plex server. (String)
-
-### Symlink Settings
-- **symlink**:
-  - **rclone_path**: Path to the rclone mount. (String)
-  - **library_path**: Path to the library directory where the symlinks will be created. (String)
-
-### Downloaders
-- **downloaders**:
-  - **real_debrid**:
-    - **enabled**: Enables or disables the Real Debrid downloader. (Boolean)
-    - **api_key**: API key for Real Debrid. You can find it [here](https://real-debrid.com/apitoken) (String)
-  - **torbox**:
-    - **enabled**: Enables or disables the Torbox downloader. (Boolean)
-    - **api_key**: API key for Torbox. You can find it [here](https://torbox.app/settings) (String)
-
-### Content Management
-- **content**:
-  - **overseerr**:
-    - **update_interval**: Frequency in seconds to update Overseerr data. (Integer, Default: 30)
-    - **enabled**: Enables or disables Overseerr integration. (Boolean)
-    - **url**: URL to access Overseerr. (String)
-    - **api_key**: API key for Overseerr. Get it at `http://OVERSEER_HOST/settings` (String)
-    - **use_webhook**: Enables or disables the webhook from Overseerr. After enabling this option, you need to go to `http://OVERSEER_HOST/settings/notifications/webhook`, enable the agent and input `http://RIVEN_HOST/webhook/overseerr` into the Webhook URL field.
-  - **plex_watchlist**:
-    - **update_interval**: Frequency in seconds to check for Plex Watchlist changes. (Integer, Default: 60)
-    - **enabled**: Enables or disables Plex Watchlist. (Boolean)
-    - **rss**: RSS feed URL for Plex Watchlist. (String, Optional)
-  - **mdblist**:
-    - **update_interval**: Frequency in seconds to check for list changes. (Integer, Default: 300)
-    - **enabled**: Enables or disables Mdblist integration. (Boolean)
-    - **api_key**: API key for Overseerr. Get it [here](https://mdblist.com/preferences/) at the bottom. (String)
-    - **lists**: IDs of the lists that should be fetched (String Array)
-  - **listrr**:
-    - **update_interval**: Frequency in seconds to check for list changes. (Integer, Default: 300)
-    - **enabled**: Enables or disables Mdblist integration. (Boolean)
-    - **movie_lists**: IDs of the movie lists that should be fetched (String Array)
-    - **show_lists**: IDs of the show lists that should be fetched (String Array)
-    - **api_key**: API key for Listrr. Get it [here](https://listrr.pro/Identity/Account/Manage) (String)
-  - **trakt**:
-    - **update_interval**: Frequency in seconds to check for list changes. (Integer, Default: 300)
-    - **enabled**: Enables or disables Mdblist integration. (Boolean)
-    - **api_key**: API key for Trakt. Create a new API App [here](https://trakt.tv/oauth/applications) and copy the client id (String)
-    - **watchlist**: Usernames of which the watchlists should be fetched (String Array)
-    - **collection**: Usernames of which the collections should be fetched (String Array)
-    - **user_lists**: URLs of user lists the should be fetched (String Array)
-    - **fetch_treding**: Wheter the trakt trending [movies](https://trakt.tv/movies/trending) and [shows](https://trakt.tv/shows/trending) should be fetched. (Boolean)
-    - **trending_count**: How many items from the trending lists should be fetched. Most trending item gets fetched first. (Integer, Default: 10)
-    - **fetch_popular**: Wheter the trakt trending [movies](https://trakt.tv/movies/popular) and [shows](https://trakt.tv/shows/popular) should be fetched. (Boolean)
-    - **popular_count**: How many items from the popularity lists should be fetched. Most popular item gets fetched first. (Integer, Default: false)
-
-### Scraping Settings
-- **scraping**:
-  - **after_2**: Delay in hours after which scraping occurs again after 2 retries. (Integer, Default: 2)
-  - **after_5**: Delay in hours after which scraping occurs again after 5 retries. (Integer, Default: 6)
-  - **after_10**: Delay in hours after which scraping occurs again after 10 retries. (Integer, Default: 24)
-  - **torrentio**:
-    - **enabled**: Enables or disables torrentio scraping. (Boolean)
-    - **filter**: Filter that should be used when querying scraper. (String, Default: `sort=qualitysize%7Cqualityfilter=480p,scr,cam,unknown`)
-    - **url**: URL of the torrentio instance. (String, Default: `https://torrentio.strem.fun`)
-    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
-    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
-  - **knightcrawler**:
-    - **enabled**: Enables or disables knightcrawler scraping. (Boolean)
-    - **filter**: Filter that should be used when querying scraper (String, Default: `sort=qualitysize%7Cqualityfilter=480p,scr,cam,unknown`)
-    - **url**: URL of the knightcrawler instance. (String, Default: `https://knightcrawler.elfhosted.com`)
-    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
-    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
-  - **jackett**:
-    - **enabled**: Enables or disables jackett scraping. (Boolean)
-    - **url**: URL of the jackett instance. (String, Default: `http://localhost:9117`)
-    - **api_key**: API key for jackett. Get it at your jackett dashboard. (String)
-    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
-    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
-  - **prowlarr**:
-    - **enabled**: Enables or disables prowlarr scraping. (Boolean)
-    - **url**: URL of the prowlarr instance. (String, Default: `http://localhost:9696`)
-    - **api_key**: API key for prowlarr. Get it at your prowlarr dashboard. (String)
-    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
-    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
-  - **orionoid**:
-    - **enabled**: Enables or disables orionoid scraping. (Boolean)
-    - **api_key**: API key for orioniod. Get it [here](https://panel.orionoid.com/). (String)
-    - **limitcount**: Maximum amount of results from this scraper. (Integer, Default: 5)
-    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
-    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
-  - **annatar**:
-    - **enabled**: Enables or disables annatar scraping. (Boolean)
-    - **url**: URL of the annatar instance. (String, Default: `https://annatar.elfhosted.com`)
-    - **limit**: Filter that should be used when querying scraper Maximum amount of results from this scraper. (Integer, Default: 2000)
-    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
-    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
-  - **torbox_scraper**:
-    - **enabled**: Enables or disables torbox scraping. Only works in combination with the torbox downloader. (Boolean)
-  - **mediafusion**:
-    - **enabled**: Enables or disables mediafusion scraping. (Boolean)
-    - **url**: URL of the mediafusion instance. (String, Default: `https://mediafusion.elfhosted.com`)
-    - **timeout**: Maximum amount in seconds for the scraping process. (Integer, Default: 30)
-    - **ratelimit**: Enables or Disabled the ratelimiting of this scraper. (Boolean, Default: true)
-    - **catalogs**: List of catalogs that should be used. You can find all the catalogs [here](https://github.com/mhdzumair/MediaFusion/blob/main/utils/const.py) (String Array)
-
-### Ranking Settings
-All ranking settings are explained in the [RTN README](https://github.com/dreulavelle/rank-torrent-name/)
-
-### Indexer Settings
-- **indexer**:
-  - **update_interval**: Interval in seconds in which the indexer gets resubmitted. (Integer, Default: 3600)
-
-This configuration file allows for extensive customization of the behavior of Riven, including integration with various services and control over downloading and scraping operations. Each section and its options can be tailored to meet specific needs or preferences.
-
-<!-- ### Symlinking settings
-
-<h1 style="color: red">IS THIS SECTION STILL NEEDED? OR SHOULD THIS BE EXPLAINED ABOVE?</h1>
-
-"host_mount" should point to your rclone mount that has your torrents on your host, if you are using native webdav set webdav-url to "https://dav.real-debrid.com/torrents"
-
-"container_mount" should point to the location of the mount in plex container
-
-#### Example:
-
-Rclone is mounted to /riven/vfs on your host machine -> settings should have: "host_mount": "/riven/vfs"
-
-Plex container volume configuration for rclone mount is "/riven/vfs:/media/vfs" -> settings should have: "container_mount": "/media/vfs"
-
-Plex libraries you want to add to sections: movies -> /media/library/movies, shows -> /media/library/shows
-
---- -->
+For detailed information on how Riven uses symlinks and manages permissions, please see the [Symlinks and Permissions](./symlinks-and-permissions.md) page.
 
 ## Development
 
-![Flowchart](../public/riven/flowchart.png)
-
-You can view the readme in `make` to get started!
-
-```sh
-make
-```
-
-To get started you can simply do this. This will stop any previous Riven containers and remove previous image.
-As well as rebuild the image using cached layers. If your a developer, then any files changed in the code will not get cached,
-and thus rebuilt in the image.
-
-```sh
-make start
-```
-
-You can also restart the container with `make restart`, or view the logs with `make logs`.
-
-### Development without `make`
-
-If you don't want to use `make` and docker, you can use the following commands to run development environment.
-
-```sh
-pip install poetry
-poetry install
-poetry run python backend/main.py
-```
-
-```sh
-cd frontend
-npm install
-npm run dev
-```
-
----
+For details on setting up the development environment and contributing to Riven, please see the [Development](./development.md) page.
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-We use Black for backend and Prettier for frontend. Please make sure to run the formatters before submitting a pull request. Also use CRLF line endings unless it is a shell script or something that requires LF line endings.
-
-We've switched to Poetry!
-
-Poetry simplifies dependency management by automatically handling package versions and resolving conflicts, ensuring that every contributor works with a consistent set of dependencies. To contribute to this project using Poetry, you'll need to install Poetry on your system. This can be done by `pip install poetry`. Once installed, you can easily manage the project's dependencies.
-
-For starters, after cloning the repository, run `poetry install` in the project's root directory. This command installs all the necessary dependencies as defined in the `pyproject.toml` file, creating an isolated virtual environment for the project. Contributors can then activate the virtual environment using `poetry shell` or run project-related commands directly using `poetry run`. 
-
-Poetry also simplifies the process of adding new dependencies or updating existing ones with commands like `poetry add package-name` and `poetry update package-name`, respectively. Before submitting a pull request, ensure your changes are compatible with the project's dependencies and coding standards. To facilitate this, we encourage contributors to use `poetry run command` to run tests and linters.
+For information on how to contribute to the Riven project, please see the [Contributing](./contributing.md) page.
 
 ---
 
-<a href="https://github.com/rivenmedia/riven/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=rivenmedia/riven" />
+<a href="https://github.com/dreulavelle/iceberg/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=dreulavelle/iceberg" />
 </a>
-
----
 
 ## License
 
-This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details.
 
